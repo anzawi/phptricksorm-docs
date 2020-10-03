@@ -7,7 +7,7 @@ base_url: 'https://anzawi.github.io/phptricksorm-docs/'
 links:
   github: anzawi
   twitter: Al_Anzawi
-  download: https://github.com/php-database-class
+  download: https://github.com/anzawi/php-database-class
 
 plugins:
   - jekyll-gist
