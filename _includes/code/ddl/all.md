@@ -1,9 +1,9 @@
 <h3>Create Table : </h3>
 
 ```php
-use PHPtricks\Orm\Bulder;
+use PHPtricks\Orm\Builder;
 
-class CreateTable extends Bulder
+class CreateTable extends Builder
 {
     protected $_table = 'table_name';
 
@@ -16,9 +16,9 @@ class CreateTable extends Bulder
 EX : 
 
 ```php
-use PHPtricks\Orm\Bulder;
+use PHPtricks\Orm\Builder;
 
-class CreateTable extends Bulder
+class CreateTable extends Builder
 {
     protected $_table = 'students';
 
