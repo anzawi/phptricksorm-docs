@@ -20,6 +20,7 @@ ul li{
 * ADD : Commands-line
 * ADD : Joins [Models Relation]
 * ADD : `toJsonFormatted()` method
+* ADD : `groupBy()` method
 * ADD : `drop()` method - to delete tables
 * MODIFY : Database Class 
 * MODIFY : `toArray()` Method 
