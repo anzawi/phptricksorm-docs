@@ -1,2 +1,2 @@
 # phptricksorm-docs
-PHPtricks-ORM Documentation (https://github.com/anzawi/database_class)
+PHPtricks-ORM Documentation (https://github.com/anzawi/php-database-class)
