@@ -1,0 +1,27 @@
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Installation <span class="docs-time">Last updated: {{ page.last-update }}</span></h1>
+    </section>
+    <section class="docs-intro">
+        <p>install PHPtricks-ORM using Composer.</p>
+    </section>
+    <section class="docs-section">
+        {% capture install %} {% include code/install-bat-json.md %} {% endcapture %}
+        {{ install | markdownify }}
+
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Whats Included</h1>
+    </section>
+    <section class="docs-intro">
+        <p>Once you download the Library, you can see a folder with several files and sub folders. You can read description of some important files.</p>
+    </section>
+    <section class="docs-section">
+        <div class="file-tree">
+            {% include partials/parts/foldersTree.html %}
+        </div>
+    </section>
+</article>

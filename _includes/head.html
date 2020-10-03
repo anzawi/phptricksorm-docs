@@ -1,0 +1,29 @@
+<head>
+    {% unless site.plugins contains "jekyll-seo-tag" %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+
+    {% if page.description %}
+    <meta name="Description" content="{{ page.description }}">
+    {% endif %}
+    {% endunless %}
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mohammad Anzawi">
+    <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+
+    <!-- FontAwesome JS-->
+    <script defer src="{{ '/assets/fontawesome/js/all.js' | absolute_url }}"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="{{ '/assets/css/theme.css' | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/code.css' | absolute_url }}">
+    <script src="{{ '/assets/plugins/jquery-3.4.1.min.js' | absolute_url }}"></script>
+</head>

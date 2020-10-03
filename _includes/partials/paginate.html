@@ -1,0 +1,38 @@
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: {{ page.last-update }}</span></h1>
+        <section class="docs-intro">
+            <p>
+                PHPtricks-ORM allows you to paginate data in easy. <br>
+                its can quickly generate pages links based on the current page, <br>
+                and the generated HTML is compatible with the Bootstrap & Zurp Foundation CSS Frameworks.<br>
+                and set you data in table. <br>
+
+                all that in 3 lines of code.
+            </p>
+        </section>
+
+        <section class="docs-section">
+            {% capture firstEx %} {% include code/pagination/first-ex.md %} {% endcapture %}
+            {{ firstEx | markdownify }}
+        </section>
+    </section>
+
+    <section class="docs-section">
+        <h2 class="docs-heading">Get Started</h2>
+
+        <h4>Configuration : </h4>
+        <p>
+            to get started working with paginate you must be know that.
+            in <code>PHPtricks/Orm/Config/database_config.php</code> find : <br>
+            <code class="plain-text">"pagination"</code> key.
+
+            {% capture configOverview %} {% include code/pagination/config-overview.md %} {% endcapture %}
+            {{ configOverview | markdownify }}
+        </p>
+        <br><br>
+        <h4>Paginate Data :</h4>
+        {% capture paginate %} {% include code/pagination/paginate.md %} {% endcapture %}
+        {{ paginate | markdownify }}
+    </section>
+</article>

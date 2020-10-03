@@ -1,0 +1,59 @@
+<header class="header fixed-top">
+    <div class="branding docs-branding">
+        <div class="container-fluid position-relative py-2">
+            <div class="docs-logo-wrapper">
+                <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="site-logo"><a class="navbar-brand" href="{{ site.base_url | absolute_url }}"><img class="logo-icon mr-2" src="" alt="phptricks-ORM"><span class="logo-text"><span class="text-alt"> v5.0.0 Docs</span></span></a></div>
+            </div><!--//docs-logo-wrapper-->
+            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                <div class="top-search-box d-none d-lg-flex">
+                    <form class="search-form w-100">
+                        <input autocomplete="off" id="search-input" type="text" placeholder="Search in PHPtricks-ORM Docs..." name="search" class="form-control search-input">
+                        <button type="button" disabled="disabled" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                        <div id="search-results" class="search-results"></div>
+                        <div class="search-overlay"></div>
+                    </form>
+                </div>
+
+                <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                    <li class="list-inline-item"><a href="https://github.com/{{ site.links.github }}"><i class="fab fa-github fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/{{ site.links.twitter }}"><i class="fab fa-twitter fa-fw"></i></a></li>
+                </ul><!--//social-list-->
+                <a href="{{ site.links.download }}" class="btn btn-primary d-none d-lg-flex">Download</a>
+            </div><!--//docs-top-utilities-->
+        </div><!--//container-->
+    </div><!--//branding-->
+</header><!--//header-->
+
+<div class="docs-wrapper">
+    <div id="docs-sidebar" class="docs-sidebar">
+        <nav id="docs-nav" class="docs-nav navbar">
+            <ul class="section-items list-unstyled nav flex-column pb-3">
+                {% assign pages = site.pages | sort: "nav_order" %}
+                {% for item in pages %}
+                    {% if item.nav-exclude == false %}
+                        <li class="nav-item section-title">
+                            <a class="nav-link scrollto{% if page.url == item.url %} active{% endif %}" href="{{ item.url | absolute_url }}">
+                                <span class="theme-icon-holder mr-2">
+                                    {% if item.title != 'Join' %}
+                                        <i class="fas fa-{{ item.icon }}"></i>
+                                    {% else %}
+                                        <div class="fa-layers fa-fw">
+                                            <i class="far fa-circle" data-fa-transform="shrink-6 left-2 up-2"></i>
+                                            <i class="far fa-circle" data-fa-transform="shrink-6 right-2 down-2"></i>
+                                            <i class="fas fa-circle stretch-rotate" data-fa-transform="shrink-10 rotate-45"></i>
+                                        </div>
+                                    {% endif %}
+                                </span>{{ item.title }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        </nav><!--//docs-nav-->
+    </div>
+</div>

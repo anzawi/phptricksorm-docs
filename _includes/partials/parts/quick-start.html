@@ -1,0 +1,92 @@
+<ul class="guides">
+    <li class="guide has-figure">
+        <div class="columns">
+            <div class="column">
+                <h5>Create Users Table</h5>
+                <p>first thing we want to create <code>users_table</code> migration via command-line.</p>
+            </div>
+            <div class="column">
+                {% capture createMigration %} {% include code/intro/quick-start-createMigration.md %} {% endcapture %}
+                {{ createMigration | markdownify }}
+            </div>
+        </div>
+    </li>
+    <li class="guide">
+        <div class="columns">
+            <div class="column">
+                <h5>Edit Migration Class</h5>
+                <p>Navigate to migration directory and open <code>UsersTable.php</code><br>
+                    and change table schema.
+                </p>
+            </div>
+            <div class="column">
+                {% capture UsersTableMigration %} {% include code/intro/UsersTableMigration.md %} {% endcapture %}
+                {{ UsersTableMigration | markdownify }}
+            </div>
+        </div>
+    </li>
+    <li class="guide">
+        <div class="columns">
+            <div class="column">
+                <h5>Migrate Table</h5>
+                <p>migrate table to database via command-line</p>
+            </div>
+            <div class="column">
+                {% capture migrateTable %} {% include code/intro/migrateTable.md %} {% endcapture %}
+                {{ migrateTable | markdownify }}
+            </div>
+        </div>
+    </li>
+    <li class="guide">
+        <div class="columns">
+            <div class="column">
+                <h5>Create Users Model</h5>
+                <p>create users model via command-line</p>
+                <br><br>
+                <h5>Generated Class</h5>
+            </div>
+            <div class="column">
+                {% capture createUsersModel %} {% include code/intro/createUsersModel.md %} {% endcapture %}
+                {{ createUsersModel | markdownify }}
+                <br><br>
+                {% capture generatedUsersModel %} {% include code/intro/generatedUsersModel.md %} {% endcapture %}
+                {{ generatedUsersModel | markdownify }}
+            </div>
+        </div>
+    </li>
+
+    <li class="guide">
+        <div class="columns">
+            <div class="column">
+                <h5>Insert Some Data</h5>
+                <p>insert some data into users table</p>
+            </div>
+            <div class="column">
+                {% capture insertData %} {% include code/intro/insertData.md %} {% endcapture %}
+                {{ insertData | markdownify }}
+            </div>
+        </div>
+    </li>
+    <li class="guide">
+        <div class="columns">
+            <div class="column">
+                <h5>get all records from users table</h5>
+                <p><code>SELECT * FROM users</code></p>
+            </div>
+            <div class="column">
+                {% capture select %} {% include code/intro/select.md %} {% endcapture %}
+                {{ select | markdownify }}
+            </div>
+        </div>
+    </li>
+</ul>
+
+<br><br>
+
+<h4>Learn More About :</h4>
+<ol>
+    <li><a href="{{ site.base_url }}migrations/">Migrations</a></li>
+    <li><a href="{{ site.base_url }}models/">Models</a></li>
+    <li><a href="{{ site.base_url | absolute_url }}dml#insert-update-delete">Insert Data</a></li>
+    <li><a href="{{ site.base_url }}dml#select">Retrieve Data</a></li>
+</ol>

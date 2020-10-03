@@ -1,0 +1,198 @@
+{
+  "Config": {
+    "description": "Contains Configuration file & Configuration helper functions file.",
+    "type": "folder",
+    "include": {
+      "config_function.php": {
+        "description": "contains helper functions.",
+        "type": "file"
+      },
+      "database_config.php": {
+        "description": "configurations file, (database information & library options).",
+        "type": "file"
+      }
+    }
+  },
+  "LICENSE": {
+    "description": "library license under (MIT) license.",
+    "type": "file"
+  },
+  "phptricks": {
+    "description": "Command manager file",
+    "type": "file"
+  },
+  "phptricksORM": {
+    "description": "Main directory, Contains All Library Classes.",
+    "type": "folder",
+    "include": {
+      "Builder.php": {
+        "description": "Tables Builder Class, (DDL Operations is here)",
+        "type": "file"
+      },
+      "Collection": {
+        "description": "Contain Collection Class",
+        "type": "folder",
+        "include": {
+          "Collection.php": {
+            "description": "Collections Class, this class manage all data we retrieves.",
+            "type": "file"
+          }
+        }
+      },
+      "Command": {
+        "description": "All Library Command is here.",
+        "type": "folder",
+        "include": {
+          "Alter.php": {
+            "description": "Migrate ALTER migration.",
+            "type": "file"
+          },
+          "Clear.php": {
+            "description": "Clear cache",
+            "type": "file"
+          },
+          "CommandHelpers.php": {
+            "description": "Contains Some Helpers for Our Commands.",
+            "type": "file"
+          },
+          "Config": {
+            "description": "Get Our configuration command.",
+            "type": "folder",
+            "include": {
+              "GetConfig.php": {
+                "description": "",
+                "type": "file"
+              }
+            }
+          },
+          "Create.php": {
+            "description": "Migrate CREATE migration.",
+            "type": "file"
+          },
+          "Drop.php": {
+            "description": "Migrate DROP migration.",
+            "type": "file"
+          },
+          "Make.php": {
+            "description": "Generate migrations Command.",
+            "type": "file"
+          },
+          "Migrate.php": {
+            "description": "Command to migrate all (CREATE, ALTER, DROP)",
+            "type": "file"
+          }
+        }
+      },
+      "DDL": {
+        "description": "Contains All DDL Functionality",
+        "type": "folder",
+        "include": {
+          "Alter.php": {
+            "description": "Alter tables Functionality trait",
+            "type": "file"
+          },
+          "Base.php": {
+            "description": "",
+            "type": "file"
+          },
+          "Create.php": {
+            "description": "Create tables Functionality trait",
+            "type": "file"
+          },
+          "Vars.php": {
+            "description": "contains variables we need in Builder Class.",
+            "type": "file"
+          }
+        }
+      },
+      "DML": {
+        "description": "All DML Operation is here",
+        "type": "folder",
+        "include": {
+          "Delete.php": {
+            "description": "Delete records Functionality trait",
+            "type": "file"
+          },
+          "Insert.php": {
+            "description": "insert into tables Functionality trait",
+            "type": "file"
+          },
+          "Paginate.php": {
+            "description": "Paginate data Functionality trait",
+            "type": "file"
+          },
+          "Query.php": {
+            "description": "Trait Contains methods to manage library queries",
+            "type": "file"
+          },
+          "Update.php": {
+            "description": "Edit & Update records Functionality trait",
+            "type": "file"
+          },
+          "Vars.php": {
+            "description": "contains variables we need in Model Class.",
+            "type": "file"
+          }
+        }
+      },
+      "Database.php": {
+        "description": "Main Class, its library brain.",
+        "type": "file"
+      },
+      "Model.php": {
+        "description": "Model Class, to manage DML operations.",
+        "type": "file"
+      },
+      "Operations": {
+        "description": "Queries Operations.",
+        "type": "folder",
+        "include": {
+          "Cond.php": {
+            "description": "contains (offset, limit and order-by) operations.",
+            "type": "file"
+          },
+          "Operations.php": {
+            "description": "contains count() method.",
+            "type": "file"
+          },
+          "Other.php": {
+            "description": "Contains data-view method.",
+            "type": "file"
+          },
+          "Where.php": {
+            "description": "WHERE clause manager",
+            "type": "file"
+          },
+          "parseWhere.php": {
+            "description": "contains parse-where functionality",
+            "type": "file"
+          }
+        }
+      },
+      "Providers": {
+        "description": "Contains supported providers connection methods.",
+        "type": "folder",
+        "include": {
+          "Provider.php": {
+            "description": "connection class.",
+            "type": "file"
+          }
+        }
+      },
+      "Relation": {
+        "description": "Relation ship between tables functionality.",
+        "type": "folder",
+        "include": {
+          "RelationProvider.php": {
+            "description": "",
+            "type": "file"
+          }
+        }
+      },
+      "Variables.php": {
+        "description": "contains variables we need in Database Class.",
+        "type": "file"
+      }
+    }
+  }
+}

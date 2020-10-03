@@ -1,0 +1,3 @@
+```php
+$allUsers = $user->select();
+```

@@ -1,0 +1,104 @@
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Introduction<span class="docs-time">Last updated: {{ page.last-update }}</span></h1>
+    </section>
+
+    <section class="docs-section">
+        <p>
+            Migrations are a type of version control for your database. They allow a team to modify the database schema and stay up to date on the current schema state. Migrations are typically paired with the Builder to easily manage your application's schema.
+        </p>
+        <br><br>
+        <small class="badge badge-danger">
+            Please Note: Migrations in version 5.0.0 considered as (BETA version), So you may find drastic changes on commands in the next release of the library
+        </small>
+        <small class="badge badge-info">
+            Do not forget that you can help me develop the library by fork or send your suggestions on github
+        </small>
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Create Migrations</h1>
+    </section>
+    <section class="docs-section">
+        <p>
+            to create migration, you may use the <code>migrate:make {migration_name} {migrate-type}</code> Command in phptricks
+        </p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td class="text-center">Migrate Type</td>
+                    <td class="text-center">Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>create</td>
+                    <td>migration to create new table</td>
+                </tr>
+                <tr>
+                    <td>alter</td>
+                    <td>migration to edit table schema</td>
+                </tr>
+                <tr>
+                    <td>drop</td>
+                    <td>migration to delete table</td>
+                </tr>
+            </tbody>
+        </table>
+
+        {% capture example %} {% include code/migration/example.md %} {% endcapture %}
+        {{ example | markdownify }}
+    </section>
+</article>
+
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Run Migrations</h1>
+    </section>
+    <section class="docs-section">
+        {% capture run %} {% include code/migration/run.md %} {% endcapture %}
+        {{ run | markdownify }}
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-section">
+        Learn More About <a href="{{ site.base_url }}ddl">DDL</a> on PHPtricks-ORM
+    </section>
+</article>
+
+
+
+<section class="cta-section text-center py-5 theme-bg-light position-relative">
+    <div class="theme-bg-shapes-right"></div>
+    <div class="theme-bg-shapes-left"></div>
+    <div class="container">
+        <h3 class="mb-2 text-black-50 mb-3">Do you have any suggestion ?</h3>
+        <div class="section-intro text-black-50 mb-3 single-col-max mx-auto">
+            feel free to contact me on < m.anzawi2013@gmail.com >
+        </div>
+        <div class="pt-3 text-center">
+            <a href="https://github.com/anzawi/database_class/issues" class="btn btn-secondary">
+                Visit Community
+            </a>
+        </div>
+    </div>
+</section><!--//cta-section-->
+<section class="cta-section text-center py-5 theme-bg-dark position-relative">
+    <div class="theme-bg-shapes-right"></div>
+    <div class="theme-bg-shapes-left"></div>
+    <div class="container">
+        <h3 class="mb-2 text-white mb-3">Fork On Github</h3>
+        <div class="section-intro text-white mb-3 single-col-max mx-auto">
+            Fork PHPtricks-ORM Library on Github and help me to develop something awesome
+        </div>
+        <div class="pt-3 text-center">
+            <a href="https://github.com/anzawi/database_class" class="btn btn-light">
+                Fork Repository
+            </a>
+        </div>
+    </div>
+</section><!--//cta-section-->

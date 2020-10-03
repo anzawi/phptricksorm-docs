@@ -1,0 +1,86 @@
+<footer class="footer">
+
+    <div class="footer-bottom text-center py-5">
+
+        <ul class="social-list list-unstyled pb-4 mb-0">
+            <li class="list-inline-item"><a href="https://github.com/{{ site.links.github }}"><i class="fab fa-github fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="https://twitter.com/{{ site.links.twitter }}"><i class="fab fa-twitter fa-fw"></i></a></li>
+        </ul><!--//social-list-->
+
+        <small class="copyright">PHPtricks-ORM Developed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://github.com/anzawi" target="_blank">Mohammad Anzawi</a> for developers</small>
+        <br>
+        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+        <small class="copyright-design">Documentation Template Designed by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a></small>
+
+
+    </div>
+
+</footer>
+<!-- Javascript -->
+<script src="{{ '/assets/plugins/popper.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/plugins/bootstrap/js/bootstrap.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/lunr.min.js' | absolute_url }}"></script>
+
+<!-- Page Specific JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script src="{{ '/assets/js/highlight-custom.js' | absolute_url }}"></script>
+<script src="{{ '/assets/plugins/jquery.scrollTo.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/plugins/lightbox/dist/ekko-lightbox.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/docs.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/code.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/search.js' | absolute_url }}"></script>
+
+<script>
+    $(function() {
+        $('.clickable').click(function () {
+            var target = $(this).data('code')
+            $("#"+target).toggleClass('is-active')
+        });
+
+        $('.modal-close, .modal-background').click(function() {
+            $('.modal').removeClass('is-active');
+        })
+    })
+</script>
+{% if page.url contains "helpers" %}
+<script>
+    $(document).ready(function () {
+        $.get("/helpers/helpers.json", function(data){
+            data.forEach(function (helper) {
+                let html = `<div class="card m-3">
+  <div class="card-header">
+    ${helper.method}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${helper.description}</li>`
+                if(helper.its_link === false)
+                    html += `
+<li class="list-group-item">
+<pre class="language-php"><code>${Prism.highlight(helper.use, Prism.languages.php, 'php')}</code></pre>
+</li>`
+                else
+                    html += `<li class="list-group-item"><a href="${helper.use}">take a look</a> </li>`
+
+                html +=`</ul>
+</div>`
+
+                $("#helpers-table").append(html)
+                $('code').css({display: "inline-block", "min-width": "100%"})
+            })
+        });
+    })
+</script>
+
+{% endif %}
+
+<!-- correct redirect for some servers  -->
+<script>
+    $(document).ready(function () {
+      let url = window.location.href;
+      if (~url.indexOf("#")) {
+        let targetElement = url.split("#").pop();
+        console.log(targetElement)
+        $(document).scrollTop('#' + targetElement);
+      }
+    });
+</script>

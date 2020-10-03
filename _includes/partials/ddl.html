@@ -1,0 +1,22 @@
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Introduction<span class="docs-time">Last updated: {{ page.last-update }}</span></h1>
+    </section>
+    <section class="docs-section">
+        <p>
+            data definition or data description language <kbd>DDL</kbd> is a syntax for creating and modifying database objects such as tables, indexes, and users.
+            <br>
+            PHPtricks-ORM <code>Builder</code> Class <strong>allows you to creating and modifying database tables only.</strong>
+        </p>
+        <br>
+        <p>
+            PHPtricks-ORM allows you to generate <code>DDL</code> Classes via <a href="{{ site.base_url }}migrations">Command-line</a>, <br>
+            this doc page to describe <code>Builder</code> Class methods.
+        </p>
+    </section>
+
+    <section class="docs-section">
+        {% capture ddl %} {% include code/ddl/all.md %} {% endcapture %}
+        {{ ddl | markdownify }}
+    </section>
+</article>

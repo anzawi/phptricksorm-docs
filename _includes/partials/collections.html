@@ -1,0 +1,51 @@
+<article class="docs-article" id="collection">
+    <section class="docs-header">
+        <h1 class="docs-heading">Collections</h1>
+    </section>
+    <section class="docs-section">
+        <p><code>PHPtricks\Orm\Collection\Collection</code> class provides a fluent, convenient wrapper for working with retrieved data.</p>
+        <p>
+            <code class="language-plaintext">select</code> <code class="language-plaintext">first</code> <code class="language-plaintext">paginate</code> <code class="language-plaintext">find</code>
+            methods return instance of <code>PHPtricks\Orm\Collection\Collection</code>
+        </p>
+        <p>
+            that's mean you can work with data in easy!
+        </p>
+    </section>
+
+    <section class="docs-section">
+        <h4>Available Methods :</h4>
+        <table class="table-bordered table text-center">
+            <tr>
+                <td>all</td>
+                <td>first</td>
+                <td>last</td>
+            </tr>
+            <tr>
+                <td>each</td>
+                <td>filter</td>
+                <td>map</td>
+            </tr>
+            <tr>
+                <td>keys</td>
+                <td>toJson</td>
+                <td>toJsonFormatted</td>
+            </tr>
+            <tr>
+                <td>merge</td>
+                <td>toArray</td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="alert-warning alert">
+            <p>
+                all methods works with returned data, not with arrays.
+            </p>
+        </div>
+
+        <section class="docs-section">
+            {% capture collections %} {% include code/dml/collections.md %} {% endcapture %}
+            {{ collections | markdownify }}
+        </section>
+    </section>
+</article>

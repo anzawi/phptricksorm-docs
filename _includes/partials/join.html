@@ -1,0 +1,54 @@
+<article class="docs-article" id="intro-section">
+    <section class="docs-header">
+        <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: {{ page.last-update }}</span></h1>
+        <section class="docs-intro">
+            <p>
+                Database tables are often related to one another. For example, a blog post may have many comments, or an order could be related to the user who placed it. <br>
+                PHPtricks-ORM have a basic & simple relations system, makes managing and working with these relationships easy.
+            </p>
+        </section>
+
+        <section class="docs-section">
+            {% capture firstEx %} {% include code/join/first-ex.md %} {% endcapture %}
+            {{ firstEx | markdownify }}
+        </section>
+    </section>
+</article>
+
+
+<article class="docs-article">
+    <section class="section-intro">
+        <p class="text-center text-primary font-weight-bold text">don't forget , you can send me your suggestion and helps me out to develop something awesome</p>
+        <br>
+    </section>
+    <section class="cta-section text-center py-5 theme-bg-light position-relative">
+        <div class="theme-bg-shapes-right"></div>
+        <div class="theme-bg-shapes-left"></div>
+        <div class="container">
+            <h3 class="mb-2 text-black-50 mb-3">Do you have any suggestion ?</h3>
+            <div class="section-intro text-black-50 mb-3 single-col-max mx-auto">
+                feel free to contact me on < m.anzawi2013@gmail.com >
+            </div>
+            <div class="pt-3 text-center">
+                <a href="https://github.com/anzawi/database_class/issues" class="btn btn-secondary">
+                    Visit Community
+                </a>
+            </div>
+        </div>
+    </section><!--//cta-section-->
+    <section class="cta-section text-center py-5 theme-bg-dark position-relative">
+        <div class="theme-bg-shapes-right"></div>
+        <div class="theme-bg-shapes-left"></div>
+        <div class="container">
+            <h3 class="mb-2 text-white mb-3">Fork On Github</h3>
+            <div class="section-intro text-white mb-3 single-col-max mx-auto">
+                Fork PHPtricks-ORM Library on Github and help me to develop something awesome
+            </div>
+            <div class="pt-3 text-center">
+                <a href="https://github.com/anzawi/database_class" class="btn btn-light">
+                    Fork Repository
+                </a>
+            </div>
+        </div>
+    </section><!--//cta-section-->
+</article>

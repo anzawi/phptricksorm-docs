@@ -1,0 +1,84 @@
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Config Database Connection<span class="docs-time">Last updated: {{ page.last-update }}</span></h1>
+    </section>
+    <section class="docs-intro">
+        <p>Config File Content</p>
+    </section>
+    <section class="docs-section">
+        {% capture configContent %} {% include code/getStarted/configContent.md %} {% endcapture %}
+        {{ configContent | markdownify }}
+        <p>
+            set your configuration, to connect with database.
+        </p>
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Include Library</h1>
+    </section>
+    <section class="docs-intro">
+        <p>Include Library Files in your Project.</p>
+        <small>if you using composer to download library simply include <code>vendor/autoload.php</code> file</small><br>
+        <small>if you Downloaded library without composer, you want to include <code>vendor/autoload.php</code> file from the library directory.</small>
+        <br><br>
+        <small>you can use <code>require_once</code> function to include library files.</small>
+    </section>
+    <section class="docs-section">
+        {% capture includeLib %} {% include code/getStarted/includeLib.md %} {% endcapture %}
+        {{ includeLib | markdownify }}
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Create Your First Table</h1>
+    </section>
+    <section class="docs-intro">
+        <p>to create table, you want to create migration first.</p>
+        <p>to create migration, use command-line</p>
+    </section>
+    <section class="docs-section">
+        {% capture createTable %} {% include code/getStarted/createTable.md %} {% endcapture %}
+        {{ createTable | markdownify }}
+
+        <ul>
+            <li><a href="{{ site.base_url }}migrations">learn more about migrations.</a></li>
+        </ul>
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Create Your First Model</h1>
+    </section>
+    <section class="docs-intro">
+        <p>you can create model manually, or using command-line</p>
+    </section>
+    <section class="docs-section">
+        {% capture createModel %} {% include code/getStarted/createModel.md %} {% endcapture %}
+        {{ createModel | markdownify }}
+
+        <ul>
+            <li><a href="{{ base_url }}models">learn more about Models.</a></li>
+        </ul>
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Insert Data in Users Table</h1>
+    </section>
+    <section class="docs-intro">
+        <p>to insert data we want to use created model.</p>
+    </section>
+    <section class="docs-section">
+        {% capture insert %} {% include code/getStarted/insert.md %} {% endcapture %}
+        {{ insert | markdownify }}
+
+        <ul>
+            <li><a href="{{ site.base_url }}dml">learn more about DML operations.</a></li>
+        </ul>
+    </section>
+</article>

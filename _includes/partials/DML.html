@@ -1,0 +1,158 @@
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: {{ page.last-update }}</span></h1>
+        <section class="docs-section">
+            <p>
+                <kbd>DML</kbd> is short name of <code>Data Manipulation Language</code> <br>
+                which deals with data manipulation and includes most common SQL statements such : <br>
+                <kbd>SELECT</kbd>, <kbd>INSERT</kbd>, <kbd>UPDATE</kbd>, <kbd>DELETE</kbd>, etc.,<br>
+                and it is used to <code>store, modify, retrieve, delete and update</code> data in a database.
+            </p>
+        </section>
+    </section>
+</article>
+<article class="docs-article" id="select">
+    <section class="docs-header">
+        <h1 class="docs-heading">SELECT</h1>
+        <section class="docs-section">
+            Select methods uses to retrieve data from a database
+        </section>
+        <section class="docs-section">
+            <h4>Methods :</h4><br>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td class="text-center">Method</td>
+                        <td class="text-center">Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>select</td>
+                        <td>Retrieve all data from a database table.</td>
+                    </tr>
+                    <tr>
+                        <td>first</td>
+                        <td>Retrieve single record from database table.</td>
+                    </tr>
+                    <tr>
+                        <td>find</td>
+                        <td>Retrieve single record from database table with condition by id. (<code>WHERE id=1</code>)</td>
+                    </tr>
+                    <tr>
+                        <td>findBy</td>
+                        <td>Retrieve records from database table with condition by custom column.</td>
+                    </tr>
+                    <tr>
+                        <td>paginate</td>
+                        <td>Paginate retrieved data from a database table.</td>
+                    </tr>
+                    <tr>
+                        <td>query</td>
+                        <td>Generate your owen Query, Type SQL Command.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            {% capture select %} {% include code/dml/select.md %} {% endcapture %}
+            {{ select | markdownify }}
+        </section>
+    </section>
+
+    <section class="docs-header">
+        <h1 class="docs-heading">Where Clauses</h1>
+    </section>
+    <section class="docs-section">
+        <p>
+            You may use the <code>where</code> method on a query builder to add where clauses to the query.<br>
+            The most basic call to where requires three arguments. <br>
+        </p>
+        <p><strong>Definition :</strong></p>
+
+        <pre><code class="language-php">public function where($field, $operator, $value = false)</code></pre>
+        <br>
+        <p><strong>Parameters :</strong></p>
+        <table class="table table-bordered">
+            <tr>
+                <td>$field</td>
+                <td><code>required</code> the name of the column.</td>
+            </tr>
+            <tr>
+                <td>$operator</td>
+                <td><code>required</code> where Clause operator.</td>
+            </tr>
+            <tr>
+                <td>$value</td>
+                <td><code>optional</code> value to evaluate against the column.</td>
+            </tr>
+        </table>
+
+        {% capture simpleWhere %} {% include code/dml/simpleWhere.md %} {% endcapture %}
+        {{ simpleWhere | markdownify }}
+        
+        <br><br>
+        <h4>where types :</h4>
+        <table class="table table-bordered">
+            <thead>
+            <tr class="text-center">
+                <td><strong>Method</strong></td>
+                <td><strong>Description</strong></td>
+            </tr>
+            </thead>
+            <tr>
+                <td>where</td>
+                <td>Simple Where Clause</td>
+            </tr>
+            <tr>
+                <td>orWhere</td>
+                <td>Or Statements</td>
+            </tr>
+            <tr>
+                <td>whereBetween</td>
+                <td>verifies that a column's value is between two values</td>
+            </tr>
+            <tr>
+                <td>likeWhere</td>
+                <td>verifies that a column's value is like value</td>
+            </tr>
+            <tr>
+                <td>in</td>
+                <td>verifies that a given column's value is contained within the given array</td>
+            </tr>
+            <tr>
+                <td>notIn</td>
+                <td>verifies that the given column's value is <strong>not</strong> contained in the given array</td>
+            </tr>
+            <tr>
+                <td>ParseWhere</td>
+                <td>advanced where clauses</td>
+            </tr>
+        </table>
+    </section>
+    <section class="docs-section">
+        {% capture whereTypes %} {% include code/dml/whereTypes.md %} {% endcapture %}
+        {{ whereTypes | markdownify }}
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-heder">
+        <h1 class="docs-heading">Ordering, Finding By, Limit & Offset</h1>
+    </section>
+    <section class="docs-section">
+        {% capture orderGroupLimitOffset %} {% include code/dml/orderGroupLimitOffset.md %} {% endcapture %}
+        {{ orderGroupLimitOffset | markdownify }}
+    </section>
+</article>
+
+<article class="docs-article" id="insert-update-delete">
+    <section class="docs-heder">
+        <h1 class="docs-heading">Inserting, Updating & Delete</h1>
+    </section>
+    <section class="docs-section">
+        {% capture insertUpdateDelete %} {% include code/dml/insertUpdateDelete.md %} {% endcapture %}
+        {{ insertUpdateDelete | markdownify }}
+    </section>
+</article>
+
+{% include partials/collections.html %}

@@ -1,0 +1,80 @@
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: {{ page.last-update }}</span></h1>
+        <section class="docs-section">
+            <p>
+                PHPtricks-ORM make transaction with database simple and easy with efficient, <br>
+                Each database table has a corresponding "Model" which is used to interact with that table. <br>
+                Models allow you to query for data in your tables, as well as (insert, update, delete) records.
+            </p>
+        </section>
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Create Models</h1>
+        <section class="docs-overview">
+            <small>
+                Before getting started, be sure to configure a database connection and models path in Config/database_config.php. <br>
+                For more information on configuring your database, check out the <a href="#">documentation</a>.
+            </small>
+        </section>
+        <section class="docs-section">
+            to create model using command
+            {% capture createUsersModel %} {% include code/intro/createUsersModel.md %} {% endcapture %}
+            {{ createUsersModel | markdownify }}
+            <br><br>
+            {% capture generatedUsersModel %} {% include code/intro/generatedUsersModel.md %} {% endcapture %}
+            {{ generatedUsersModel | markdownify }}
+
+            <p>
+                use optional flag <code>-table=table_name</code> or <code>--t=table_name</code> or <code>--t table_name</code>
+                to define property <code>protected $_table</code>
+            </p>
+            <br>
+            <small>without defining <code>protected $_table</code> he model cannot specify which table to perform operations on</small>
+            <br><br>
+            <h4>Primary Key :</h4>
+            <p>
+                PHPtricks will also assume that each table has a primary key column named <kbd>id</kbd>.
+                <br>
+                You may define a protected $_idColumn property to override this convention.
+            </p>
+        </section>
+    </section>
+</article>
+
+<article class="docs-article">
+    <section class="docs-header">
+        <h1 class="docs-heading">Retrieving Models</h1>
+        <section class="docs-section">
+            <small>for any explain for examples under this section pleas check out <a href="#">DML operations.</a> </small>
+        </section>
+        <section class="docs-section">
+            <h4>Get Data :</h4>
+            <br>
+            {% capture retrievingModels %} {% include code/models/retrievingModels.md %} {% endcapture %}
+            {{ retrievingModels | markdownify }}
+
+            <br><br>
+            <h4>Collections :</h4>
+            <p>
+                For PHPtricks-ORM methods like (<code>all</code>, <code>get</code>, <code>map</code> and <code>filter</code>, ...) <br>
+                which retrieve multiple results, an instance of <code>PHPtricksOrm\Collection\Collection</code> will be returned. <br>
+                The Collection class provides a variety of helpful methods for working with your results:
+            </p>
+            {% capture collectionFilter %} {% include code/models/collectionFilter.md %} {% endcapture %}
+            {{ collectionFilter | markdownify }}
+
+            <br>
+            <a href="{{ site.base_url }}dml#collection">Collections Documentation</a>
+        </section>
+
+        <section class="docs-section">
+            <h4>Insert , Update & Delete Models</h4>
+            {% capture insert %} {% include code/models/insert.md %} {% endcapture %}
+            {{ insert | markdownify }}
+        </section>
+    </section>
+</article>

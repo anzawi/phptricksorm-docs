@@ -1,0 +1,3 @@
+```
+php phptricks migrate
+```
