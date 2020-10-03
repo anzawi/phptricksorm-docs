@@ -1,0 +1,20 @@
+theme: logaty-documentation
+
+title: PHPtricks-ORM
+
+base_url: 'https://anzawi.github.io/phptricksorm-docs/'
+
+links:
+  github: anzawi
+  twitter: Al_Anzawi
+  download: https://github.com/php-database-class
+
+plugins:
+  - jekyll-gist
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      nav-exclude: false
